@@ -1,0 +1,38 @@
+<!-- 
+ file: index.html
+ Author: Jinpa Tsering
+ Date: 6/17/2022
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Popular 100 books</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+        $(function () {
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Popular Books</h2>
+    <small>The following are the top 100 most famous books as of 6/14/2022.</small><br />
+    <label for="search-field">Search Book:</label>
+    <input id="search-field" placeholder="Enter book name or author" input type="text" />
+    <p id="result"></p><br />
+    <button id="sort">Sort A-Z</button>
+    <button id="sortDes">Sort Z-A</button>
+    <ul id="sortable">
+    </ul>
+    <script src="script.js"></script>
+</body>
+
+</html>
